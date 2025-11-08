@@ -537,8 +537,7 @@ server.on('upgrade', (request, socket, head) => {
         'User-Agent': 'NativeProxy/1.0.0',
         'Authorization': request.headers['authorization'] || '',
         'Cookie': request.headers['cookie'] || ''
-      },
-      rejectUnauthorized: false
+      }
     });
 
     console.log(`WebSocket proxying: ${targetUrl}`);
